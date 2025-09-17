@@ -13,9 +13,11 @@
         
           // dark color theme
           pimary:{main :"#6851ff"},
-          background:{default :"#121212", paper:"#1e1e1e"},
+          background:{default :"#1e1e1e", paper:"#292930"},
           text :{primary :"#fff"}
-        
+        // #292930 bg dark card color
+        // #D3D3D3 text dark color
+
         }
       )
     }

@@ -1,31 +1,3 @@
-// import NotificationsIcon from "@mui/icons-material/Notifications";
-// import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-// import React from "react";
-
-// const Topbar = () => {
-//   return (
-//    <div className="sticky top-0 z-10">
-//      <div className="flex justify-between items-center p-4 h-[8vh] bg-white shadow-md">
-//       <div className="text-2xl font-bold text-[#6851ff]">
-//         HIRINGMINE
-//       </div>
-//       {/* <input
-//         type="text"
-//         placeholder="Search..."
-//         className="border rounded-md px-3 py-1 w-1/3"
-//       /> */}
-
-//       <div className="flex items-center gap-4">
-//         <NotificationsIcon className="text-gray-600 cursor-pointer" />
-//         <AccountCircleIcon className="text-gray-600 cursor-pointer" />
-//       </div>
-//     </div>
-//    </div>
-//   );
-// };
-
-// export default Topbar;
-
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -44,7 +16,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 
 export default function MenuAppBar({ toggleSidebar, open, mode, setMode }) {
-  // const [open, setOpen] = React.useState(false);
+
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -65,20 +37,16 @@ export default function MenuAppBar({ toggleSidebar, open, mode, setMode }) {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      {/* <FormGroup>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={auth}
-              onChange={handleChange}
-              aria-label="login switch"
-            />
-          }
-          label={auth ? 'Logout' : 'Login'}
-        />
-      </FormGroup> */}
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1, }}>
+      
+      <AppBar position="static" color="transparent"
+  elevation={0}
+  sx={{
+    backgroundColor: "#6851ff",
+  }}
+      
+      // sx={{bg : mode === "light" ? "#6851ff" : "#292930"}}
+      >
         <Toolbar>
           <IconButton
             onClick={toggleSidebar}
@@ -91,7 +59,7 @@ export default function MenuAppBar({ toggleSidebar, open, mode, setMode }) {
             {open ? <ArrowBackIcon /> : <MenuIcon />}
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            HIRINGMINE
+            {/* HIRINGMINE */}
           </Typography>
 
           {/* Theme Switcher */}
